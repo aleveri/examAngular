@@ -1,0 +1,92 @@
+/* You can add global styles to this file, and also import other style files */
+.section
+{
+    background-color: #ffffff;
+    width: 100%;
+    border: 1px solid #ededf1;
+}
+.nav-bar-hotel-container
+{
+    background-color:#063c7f;
+}
+.mt-20
+{
+    margin-top: 20px;
+}
+.blue-titles
+{
+    color:#0679b3;
+}
+.small-titles
+{
+    font-size: 16px;
+}
+.filter-cards .card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+.star-color {
+    color: #ffbb00;
+    margin: 0 5px;
+}
+.input-group-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: .375rem .75rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    text-align: center;
+    white-space: nowrap;
+    background-color: transparent !important;
+    border:none !important;
+    border-radius: .25rem;
+}
+.star-container {
+    margin: 0;
+    padding: 0;
+}
+.nopadding
+{
+    padding: 0;
+}
+.black-title
+{
+    margin: auto;
+    padding: 10px 0;
+}
+.card-icons
+{
+    max-width: 40px;
+    margin: 10px;
+    padding: 5px;
+    display: inline-block !important;
+}
+.blue-btn
+{
+    background-color: #063c7f;
+    color: #ffffff;
+    width: 200px;
+    margin: auto;
+}
+.orange-text
+{
+    color: #e16800;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+}
+.orange-text span
+{
+    color: #e16800;
+    font-size: 45px;
+    font-weight: 600;
+}

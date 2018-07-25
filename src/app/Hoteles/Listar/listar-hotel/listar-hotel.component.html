@@ -1,0 +1,203 @@
+<div class="container-fluid">
+  <div class="row mt-20">
+    <div class="col-md-3">
+      <div class="col-md-12 nopadding">
+        <div class="section col-md-12">
+          <p class="black-title">
+            <strong>Filtros</strong>
+          </p>
+        </div>
+      </div>
+      <div id="accordion" class="filter-cards">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <label class="col-md-10 blue-titles small-titles">
+                <i class="fas fa-search blue-titles"></i> Nombre de hotel</label>
+              <a class="btn btn-link col-md-2" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <i class="fa fa-caret-up blue-titles"></i>
+              </a>
+            </h5>
+          </div>
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Nombre Hotel">
+                </div>
+                <div class="col">
+                  <button class="btn btn-default" (click)="filtrar()">Aceptar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+              <label class="col-md-10 blue-titles small-titles">
+                <i class="fas fa-star blue-titles"></i> Estrellas</label>
+              <a class="btn btn-link col-md-2" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                <i class="fa fa-caret-up blue-titles"></i>
+              </a>
+            </h5>
+          </div>
+          <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-10">
+                  <div class="row">
+                    <div class="input-group-text col-md-2">
+                      <input type="checkbox" (change)="estrellas(0, 6, true)" aria-label="Checkbox for following text input">
+                    </div>
+                    <label col-md-10>Todas las estrellas</label>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-8">
+                  <div class="row">
+                    <div class="input-group-text col-md-2">
+                      <input type="checkbox" (change)="estrellas(6, 6, false)" aria-label="Checkbox for following text input">
+                    </div>
+                    <div class="col-md-10 star-container">
+                      <i class="fas fa-star star-color"></i>
+                      <i class="fas fa-star star-color"></i>
+                      <i class="fas fa-star star-color"></i>
+                      <i class="fas fa-star star-color"></i>
+                      <i class="fas fa-star star-color"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-8">
+                  <div class="row">
+                    <div class="input-group-text col-md-2">
+                      <input type="checkbox" (change)="estrellas(5, 5, false)" aria-label="Checkbox for following text input">
+                    </div>
+                    <div class="col-md-10 star-container">
+                      <i class="fas fa-star star-color"></i>
+                      <i class="fas fa-star star-color"></i>
+                      <i class="fas fa-star star-color"></i>
+                      <i class="fas fa-star star-color"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-8">
+                  <div class="row">
+                    <div class="input-group-text col-md-2">
+                      <input type="checkbox" (change)="estrellas(3, 4, false)" aria-label="Checkbox for following text input">
+                    </div>
+                    <div class="col-md-10 star-container">
+                      <i class="fas fa-star star-color"></i>
+                      <i class="fas fa-star star-color"></i>
+                      <i class="fas fa-star star-color"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-8">
+                  <div class="row">
+                    <div class="input-group-text col-md-2">
+                      <input type="checkbox" (change)="estrellas(3, 3, false)" aria-label="Checkbox for following text input">
+                    </div>
+                    <div class="col-md-10 star-container">
+                      <i class="fas fa-star star-color"></i>
+                      <i class="fas fa-star star-color"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-8">
+                  <div class="row">
+                    <div class="input-group-text col-md-2">
+                      <input type="checkbox" (change)="estrellas(2, 2, false)" aria-label="Checkbox for following text input">
+                    </div>
+                    <div class="col-md-10 star-container">
+                      <i class="fas fa-star star-color"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-8" *ngFor="let hotel of hoteles">
+      <div class="section">
+        <div class="row">
+          <div class="col">
+            <img src="assets/images/{{hotel.image}}" alt="">
+          </div>
+          <div class="col">
+            <div class="row">
+              <div class="col-md-12 nopadding">
+                <label class="col-md-10 blue-titles small-titles nopadding">
+                  {{hotel.name}}
+                </label>
+              </div>
+              <div class="col-md-12">
+                <div class="row">
+                  <div class="col-md-6 star-container" *ngIf="hotel.stars == 5">
+                    <i class="fas fa-star star-color"></i>
+                    <i class="fas fa-star star-color"></i>
+                    <i class="fas fa-star star-color"></i>
+                    <i class="fas fa-star star-color"></i>
+                    <i class="fas fa-star star-color"></i>
+                  </div>
+                  <div class="col-md-6 star-container" *ngIf="hotel.stars == 4">
+                    <i class="fas fa-star star-color"></i>
+                    <i class="fas fa-star star-color"></i>
+                    <i class="fas fa-star star-color"></i>
+                    <i class="fas fa-star star-color"></i>
+                  </div>
+                  <div class="col-md-6 star-container" *ngIf="hotel.stars == 3">
+                    <i class="fas fa-star star-color"></i>
+                    <i class="fas fa-star star-color"></i>
+                    <i class="fas fa-star star-color"></i>
+                  </div>
+                  <div class="col-md-6 star-container" *ngIf="hotel.stars == 2">
+                    <i class="fas fa-star star-color"></i>
+                    <i class="fas fa-star star-color"></i>
+                  </div>
+                  <div class="col-md-6 star-container" *ngIf="hotel.stars == 1">
+                    <i class="fas fa-star star-color"></i>
+                  </div>
+                  <div class="col-md-12 nopadding">
+                    <div class="row">
+                      <div class="col" *ngFor="let item of hotel.amenities">
+                        <img src="assets/images/{{item}}.svg" class="d-inline-block align-top card-icons" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <table>
+              <tr>
+                Precio por noche habitación
+              </tr>
+              <p class="orange-text">
+                ARS
+                <span>{{hotel.price}}</span>
+              </p>
+              <tr>
+                <button class="btn btn-default blue-btn">Ver Hotel</button>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ngx-spinner bdColor="rgba(255,255,255,0.94)" size="large" color="#063c7f" type="pacman"></ngx-spinner>
