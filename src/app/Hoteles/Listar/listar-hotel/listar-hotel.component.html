@@ -1,20 +1,21 @@
 <div class="container-fluid">
   <div class="row mt-20">
-    <div class="col-md-3">
+    <div class="col-md-4">
       <div class="col-md-12 nopadding">
-        <div class="section col-md-12">
+        <div class="section col-md-12 filter-container">
           <p class="black-title">
             <strong>Filtros</strong>
           </p>
         </div>
       </div>
       <div id="accordion" class="filter-cards">
-        <div class="card">
+        <div class="card mt-20">
           <div class="card-header" id="headingOne">
             <h5 class="mb-0">
-              <label class="col-md-10 blue-titles small-titles">
-                <i class="fas fa-search blue-titles"></i> Nombre de hotel</label>
-              <a class="btn btn-link col-md-2" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <label class="col-10 blue-titles small-titles">
+                <i class="fas fa-search blue-titles"></i> Nombre de hotel
+              </label>
+              <a class="btn btn-link col-2" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                 <i class="fa fa-caret-up blue-titles"></i>
               </a>
             </h5>
@@ -22,22 +23,22 @@
           <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
             <div class="card-body">
               <div class="row">
-                <div class="col">
-                  <input type="text" class="form-control" placeholder="Nombre Hotel">
+                <div class="col-md-7 mb-20">
+                  <input type="text" class="form-control" placeholder="Ingrese el nombre del hotel">
                 </div>
-                <div class="col">
-                  <button class="btn btn-default" (click)="filtrar()">Aceptar</button>
+                <div class="col-md-5">
+                  <button class="btn btn-default blue-btn" (click)="filtrar()">Aceptar</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="card">
+        <div class="card mt-20">
           <div class="card-header" id="headingTwo">
             <h5 class="mb-0">
-              <label class="col-md-10 blue-titles small-titles">
+              <label class="col-10 blue-titles small-titles">
                 <i class="fas fa-star blue-titles"></i> Estrellas</label>
-              <a class="btn btn-link col-md-2" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+              <a class="btn btn-link col-2" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                 <i class="fa fa-caret-up blue-titles"></i>
               </a>
             </h5>
@@ -45,22 +46,22 @@
           <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordion">
             <div class="card-body">
               <div class="row">
-                <div class="col-md-10">
+                <div class="col-md-12">
                   <div class="row">
-                    <div class="input-group-text col-md-2">
+                    <div class="input-group-text col-2">
                       <input type="checkbox" (change)="estrellas(0, 6, true)" aria-label="Checkbox for following text input">
                     </div>
-                    <label col-md-10>Todas las estrellas</label>
+                    <label class="col-10 nopadding">Todas las estrellas</label>
                   </div>
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-12">
                   <div class="row">
-                    <div class="input-group-text col-md-2">
+                    <div class="input-group-text col-2">
                       <input type="checkbox" (change)="estrellas(6, 6, false)" aria-label="Checkbox for following text input">
                     </div>
-                    <div class="col-md-10 star-container">
+                    <div class="col-10 star-container">
                       <i class="fas fa-star star-color"></i>
                       <i class="fas fa-star star-color"></i>
                       <i class="fas fa-star star-color"></i>
@@ -71,12 +72,12 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-12">
                   <div class="row">
-                    <div class="input-group-text col-md-2">
+                    <div class="input-group-text col-2">
                       <input type="checkbox" (change)="estrellas(5, 5, false)" aria-label="Checkbox for following text input">
                     </div>
-                    <div class="col-md-10 star-container">
+                    <div class="col-10 star-container">
                       <i class="fas fa-star star-color"></i>
                       <i class="fas fa-star star-color"></i>
                       <i class="fas fa-star star-color"></i>
@@ -86,12 +87,12 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-12">
                   <div class="row">
-                    <div class="input-group-text col-md-2">
+                    <div class="input-group-text col-2">
                       <input type="checkbox" (change)="estrellas(3, 4, false)" aria-label="Checkbox for following text input">
                     </div>
-                    <div class="col-md-10 star-container">
+                    <div class="col-10 star-container">
                       <i class="fas fa-star star-color"></i>
                       <i class="fas fa-star star-color"></i>
                       <i class="fas fa-star star-color"></i>
@@ -100,12 +101,12 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-12">
                   <div class="row">
-                    <div class="input-group-text col-md-2">
+                    <div class="input-group-text col-2">
                       <input type="checkbox" (change)="estrellas(3, 3, false)" aria-label="Checkbox for following text input">
                     </div>
-                    <div class="col-md-10 star-container">
+                    <div class="col-10 star-container">
                       <i class="fas fa-star star-color"></i>
                       <i class="fas fa-star star-color"></i>
                     </div>
@@ -113,12 +114,12 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-12">
                   <div class="row">
-                    <div class="input-group-text col-md-2">
+                    <div class="input-group-text col-2">
                       <input type="checkbox" (change)="estrellas(2, 2, false)" aria-label="Checkbox for following text input">
                     </div>
-                    <div class="col-md-10 star-container">
+                    <div class="col-10 star-container">
                       <i class="fas fa-star star-color"></i>
                     </div>
                   </div>
@@ -131,50 +132,51 @@
     </div>
     <div class="col-md-1">
     </div>
-    <div class="col-md-8" *ngFor="let hotel of hoteles">
+    <div class="col-md-7" >
       <div class="section">
+        <div class="item-container" *ngFor="let hotel of hoteles">
         <div class="row">
-          <div class="col">
-            <img src="assets/images/{{hotel.image}}" alt="">
+          <div class="col-md-5">
+            <img src="assets/images/{{hotel.image}}" alt="" class="hotel-img">
           </div>
-          <div class="col">
+          <div class="col-md-4">
             <div class="row">
-              <div class="col-md-12 nopadding">
-                <label class="col-md-10 blue-titles small-titles nopadding">
+              <div class="col-md-12">
+                <label class="col-md-12 blue-titles small-titles">
                   {{hotel.name}}
                 </label>
               </div>
               <div class="col-md-12">
-                <div class="row">
-                  <div class="col-md-6 star-container" *ngIf="hotel.stars == 5">
+                <div class="col-md-12">
+                  <div class="col-md-12 star-container" *ngIf="hotel.stars == 5">
                     <i class="fas fa-star star-color"></i>
                     <i class="fas fa-star star-color"></i>
                     <i class="fas fa-star star-color"></i>
                     <i class="fas fa-star star-color"></i>
                     <i class="fas fa-star star-color"></i>
                   </div>
-                  <div class="col-md-6 star-container" *ngIf="hotel.stars == 4">
+                  <div class="col-md-12 star-container" *ngIf="hotel.stars == 4">
                     <i class="fas fa-star star-color"></i>
                     <i class="fas fa-star star-color"></i>
                     <i class="fas fa-star star-color"></i>
                     <i class="fas fa-star star-color"></i>
                   </div>
-                  <div class="col-md-6 star-container" *ngIf="hotel.stars == 3">
+                  <div class="col-md-12 star-container" *ngIf="hotel.stars == 3">
                     <i class="fas fa-star star-color"></i>
                     <i class="fas fa-star star-color"></i>
                     <i class="fas fa-star star-color"></i>
                   </div>
-                  <div class="col-md-6 star-container" *ngIf="hotel.stars == 2">
+                  <div class="col-md-12 star-container" *ngIf="hotel.stars == 2">
                     <i class="fas fa-star star-color"></i>
                     <i class="fas fa-star star-color"></i>
                   </div>
-                  <div class="col-md-6 star-container" *ngIf="hotel.stars == 1">
+                  <div class="col-md-12 star-container" *ngIf="hotel.stars == 1">
                     <i class="fas fa-star star-color"></i>
                   </div>
                   <div class="col-md-12 nopadding">
                     <div class="row">
-                      <div class="col" *ngFor="let item of hotel.amenities">
-                        <img src="assets/images/{{item}}.svg" class="d-inline-block align-top card-icons" alt="">
+                      <div class="col" >
+                        <img *ngFor="let item of hotel.amenities" src="assets/images/{{item}}.svg" class="d-inline-block align-top card-icons" alt="">
                       </div>
                     </div>
                   </div>
@@ -182,20 +184,20 @@
               </div>
             </div>
           </div>
-          <div class="col">
-            <table>
-              <tr>
-                Precio por noche habitación
-              </tr>
-              <p class="orange-text">
-                ARS
-                <span>{{hotel.price}}</span>
-              </p>
-              <tr>
-                <button class="btn btn-default blue-btn">Ver Hotel</button>
-              </tr>
-            </table>
+          <div class="col-md-3">
+            <div class="col-12 price-border">
+                <p class="price-title">
+                    Precio por noche habitación
+                  </p>
+                  <p class="orange-text">
+                    ARS
+                    <span>{{hotel.price}}</span>
+                  </p>
+                    <button class="btn btn-default blue-btn">Ver Hotel</button>
+            </div>
+
           </div>
+        </div>
         </div>
       </div>
     </div>

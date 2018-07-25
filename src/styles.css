@@ -1,9 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+body
+{
+    background-color:#f2f2f2!important;
+}
+input
+{
+    margin:auto;
+}
 .section
 {
-    background-color: #ffffff;
     width: 100%;
-    border: 1px solid #ededf1;
 }
 .nav-bar-hotel-container
 {
@@ -13,6 +19,10 @@
 {
     margin-top: 20px;
 }
+.mb-20
+{
+ margin-bottom:20px;
+}
 .blue-titles
 {
     color:#0679b3;
@@ -20,6 +30,12 @@
 .small-titles
 {
     font-size: 16px;
+}
+.filter-container
+{
+    border: 1px solid rgba(0,0,0,.125);
+    background-color: #ffffff;
+    border-radius: 3px;
 }
 .filter-cards .card-header {
     padding: .75rem 1.25rem;
@@ -53,6 +69,7 @@
 .star-container {
     margin: 0;
     padding: 0;
+    font-size: 13px;
 }
 .nopadding
 {
@@ -63,30 +80,85 @@
     margin: auto;
     padding: 10px 0;
 }
-.card-icons
-{
-    max-width: 40px;
-    margin: 10px;
-    padding: 5px;
+.card-icons {
+    max-width: 25px;
+    margin: 2px;
+    padding: 4px;
     display: inline-block !important;
 }
-.blue-btn
-{
+.blue-btn {
+    display: block;
     background-color: #063c7f;
     color: #ffffff;
-    width: 200px;
+    width: 100%;
     margin: auto;
+    max-width: 160px;
+    font-size: 20px;
 }
 .orange-text
 {
     color: #e16800;
-    font-size: 25px;
+    font-size: 18px;
     font-weight: 600;
     text-align: center;
 }
 .orange-text span
 {
     color: #e16800;
-    font-size: 45px;
+    font-size: 25px;
     font-weight: 600;
+}
+.item-container
+{
+    margin: 0 0 15px 0;
+    border: 1px solid #cecece;
+    padding: 10px;
+    background-color: #ffffff;
+}
+.hotel-img
+{
+    width: 100%;
+}
+.price-title
+{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    font-size: 15px;
+}
+.price-border {
+    border-left: 1px dashed rgba(0,0,0,.125);
+    height: 100%;
+    padding: 45px 10px;
+}
+
+@media screen and (min-width:768px)and (max-width:992px)
+{
+    .orange-text {
+        font-size: 14px;
+    }
+    .orange-text span {
+        font-size: 20px;
+    }
+    .blue-btn {
+        font-size: 13px;
+    }
+    .price-title
+{
+    font-size: 12px;
+}
+}
+
+@media screen and (max-width:768px)
+{
+    .no-padding-res
+{
+    padding: 0;
+}
+.price-border {
+    border-top: 1px dashed rgba(0,0,0,.125);
+    border-left: 0;
+    margin-top: 20px;
+    padding-top: 20px;
+}
 }
